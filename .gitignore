@@ -1,0 +1,6 @@
+# don't upload these files/folders to the GitHub repository
+notes.txt
+SandP500vsISK.ipynb
+# upload the Data-folder but not it's contents
+Data/* 
+!Data/ 

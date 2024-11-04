@@ -1,0 +1,18 @@
+no column names for data in the csv version - xml version provides descriptive element names 
+csv data is only in 2 columns because there is only one place in each row where a comma is placed
+
+    print("df.shape:\n", df.shape)  - shows 2 columns and 4994 rows (4994, 2)
+    print("df.head:\n", df.head)    - shows only two columns
+    print("columns: ", list(df))    - shows the first row of the dataframe and contains no descriptive names
+
+    to fix this have pandas use semicolons (;) as a separator and specify column names
+
+proposed tests and some results (see also qa-results.txt): 
+    check if all values in Values columns are a zero or higher and lower than some (absurdly high) number (e.g. 999) -> all values are with in the specified range (i.e. 0-999)
+    expect there to be no cells with null values in the Values column -> results: there are no null cells with null values in the Values column
+    test that column names exist (will be more useful when column names are automatically extracted from xml data) -> results: column names are correct
+    
+    to-be-checked-later: 
+        check if values of the following columns are the same in all rows: groupid, name, timeseriesID, famename, name, description
+        expect all dates to be with in the specified timeframe  
+    
